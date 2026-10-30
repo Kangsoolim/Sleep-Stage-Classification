@@ -1,0 +1,88 @@
+{
+  "subjects": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "recording": [
+    1
+  ],
+  "processing": {
+    "eeg_channels": [
+      "Fpz-Cz",
+      "Pz-Oz"
+    ],
+    "wake_trimming": "official tutorial: retain 30 minutes before/after sleep",
+    "epoch_duration_s": 30.0,
+    "labels": [
+      "Sleep stage W",
+      "Sleep stage 1",
+      "Sleep stage 2",
+      "Sleep stage 3/4",
+      "Sleep stage R"
+    ],
+    "feature_method": "official normalized PSD relative band-power",
+    "feature_bands": [
+      "delta",
+      "theta",
+      "alpha",
+      "sigma",
+      "beta"
+    ]
+  },
+  "epoch_count_by_subject": {
+    "0": 841,
+    "1": 1103,
+    "2": 1025,
+    "3": 952,
+    "4": 1235,
+    "5": 672,
+    "6": 843,
+    "7": 976,
+    "8": 1134,
+    "9": 1132
+  },
+  "label_count_all_subjects": {
+    "Sleep stage W": 1760,
+    "Sleep stage 1": 764,
+    "Sleep stage 2": 4312,
+    "Sleep stage 3/4": 1483,
+    "Sleep stage R": 1594
+  },
+  "feature_columns": [
+    "delta_Fpz-Cz",
+    "delta_Pz-Oz",
+    "theta_Fpz-Cz",
+    "theta_Pz-Oz",
+    "alpha_Fpz-Cz",
+    "alpha_Pz-Oz",
+    "sigma_Fpz-Cz",
+    "sigma_Pz-Oz",
+    "beta_Fpz-Cz",
+    "beta_Pz-Oz"
+  ],
+  "feature_dimension": 10,
+  "total_samples": 9913,
+  "nan_count": 0,
+  "inf_count_features": 0,
+  "group_kfold": {
+    "n_splits": 5,
+    "groups": "subject_id",
+    "all_fold_subject_overlap_count": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "each_subject_tested_once": true
+  },
+  "feature_cache": "data/processed/sleep_edf_subjects_0_9_recording_1_epoch_features.csv"
+}

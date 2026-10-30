@@ -1,0 +1,80 @@
+{
+  "subjects": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "recording": [
+    1
+  ],
+  "mne_cache_dir": "data/mne_data",
+  "files": [
+    {
+      "subject_id": 0,
+      "recording": 1,
+      "psg_filename": "SC4001E0-PSG.edf",
+      "hypnogram_filename": "SC4001EC-Hypnogram.edf"
+    },
+    {
+      "subject_id": 1,
+      "recording": 1,
+      "psg_filename": "SC4011E0-PSG.edf",
+      "hypnogram_filename": "SC4011EH-Hypnogram.edf"
+    },
+    {
+      "subject_id": 2,
+      "recording": 1,
+      "psg_filename": "SC4021E0-PSG.edf",
+      "hypnogram_filename": "SC4021EH-Hypnogram.edf"
+    },
+    {
+      "subject_id": 3,
+      "recording": 1,
+      "psg_filename": "SC4031E0-PSG.edf",
+      "hypnogram_filename": "SC4031EC-Hypnogram.edf"
+    },
+    {
+      "subject_id": 4,
+      "recording": 1,
+      "psg_filename": "SC4041E0-PSG.edf",
+      "hypnogram_filename": "SC4041EC-Hypnogram.edf"
+    },
+    {
+      "subject_id": 5,
+      "recording": 1,
+      "psg_filename": "SC4051E0-PSG.edf",
+      "hypnogram_filename": "SC4051EC-Hypnogram.edf"
+    },
+    {
+      "subject_id": 6,
+      "recording": 1,
+      "psg_filename": "SC4061E0-PSG.edf",
+      "hypnogram_filename": "SC4061EC-Hypnogram.edf"
+    },
+    {
+      "subject_id": 7,
+      "recording": 1,
+      "psg_filename": "SC4071E0-PSG.edf",
+      "hypnogram_filename": "SC4071EC-Hypnogram.edf"
+    },
+    {
+      "subject_id": 8,
+      "recording": 1,
+      "psg_filename": "SC4081E0-PSG.edf",
+      "hypnogram_filename": "SC4081EC-Hypnogram.edf"
+    },
+    {
+      "subject_id": 9,
+      "recording": 1,
+      "psg_filename": "SC4091E0-PSG.edf",
+      "hypnogram_filename": "SC4091EC-Hypnogram.edf"
+    }
+  ]
+}

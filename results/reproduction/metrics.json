@@ -1,0 +1,126 @@
+{
+  "mne_version": "1.13.2",
+  "sklearn_version": "1.9.1",
+  "train_subject": 0,
+  "test_subject": 1,
+  "recording": 1,
+  "channel_names": [
+    "Fpz-Cz",
+    "Pz-Oz",
+    "horizontal",
+    "oro-nasal",
+    "submental",
+    "rectal",
+    "Event marker"
+  ],
+  "eeg_channels_picks_eeg": [
+    "Fpz-Cz",
+    "Pz-Oz"
+  ],
+  "sfreq_train_hz": 100.0,
+  "sfreq_test_hz": 100.0,
+  "epoch_duration_s": 30.0,
+  "classes": [
+    "Sleep stage W",
+    "Sleep stage 1",
+    "Sleep stage 2",
+    "Sleep stage 3/4",
+    "Sleep stage R"
+  ],
+  "n_classes": 5,
+  "n_train_epochs": 841,
+  "n_test_epochs": 1103,
+  "train_class_counts": {
+    "Sleep stage W": 188,
+    "Sleep stage 1": 58,
+    "Sleep stage 2": 250,
+    "Sleep stage 3/4": 220,
+    "Sleep stage R": 125
+  },
+  "test_class_counts": {
+    "Sleep stage W": 157,
+    "Sleep stage 1": 109,
+    "Sleep stage 2": 562,
+    "Sleep stage 3/4": 105,
+    "Sleep stage R": 170
+  },
+  "feature_shape_train": [
+    841,
+    10
+  ],
+  "feature_shape_test": [
+    1103,
+    10
+  ],
+  "expected_feature_dim": 10,
+  "psd_range_hz": [
+    0.5,
+    30.0
+  ],
+  "frequency_bands_hz": {
+    "delta": [
+      0.5,
+      4.5
+    ],
+    "theta": [
+      4.5,
+      8.5
+    ],
+    "alpha": [
+      8.5,
+      11.5
+    ],
+    "sigma": [
+      11.5,
+      15.5
+    ],
+    "beta": [
+      15.5,
+      30.0
+    ]
+  },
+  "accuracy": 0.6872166817769719,
+  "macro_f1": 0.574339951605323,
+  "confusion_matrix": [
+    [
+      152,
+      0,
+      1,
+      4,
+      0
+    ],
+    [
+      68,
+      29,
+      8,
+      1,
+      3
+    ],
+    [
+      44,
+      30,
+      447,
+      23,
+      18
+    ],
+    [
+      0,
+      0,
+      4,
+      101,
+      0
+    ],
+    [
+      52,
+      72,
+      17,
+      0,
+      29
+    ]
+  ],
+  "output_paths": {
+    "classification_report": "results/reproduction/classification_report.csv",
+    "confusion_matrix": "results/reproduction/confusion_matrix.csv",
+    "confusion_matrix_figure": "figures/reproduction/confusion_matrix.png"
+  }
+}

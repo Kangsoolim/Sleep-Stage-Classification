@@ -1,0 +1,169 @@
+{
+  "fixed_subjects": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "fold_assignment_source": "results/main_experiment/fold_assignments.csv",
+  "fold_assignment_read_unchanged": true,
+  "both_models_share_identical_fold_test_subjects": true,
+  "model_parameters": {
+    "standard": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": null,
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 241,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "balanced": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "class_weight": "balanced",
+      "criterion": "gini",
+      "max_depth": null,
+      "max_features": "sqrt",
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 1,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": null,
+      "oob_score": false,
+      "random_state": 241,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "model_parameter_differences": {
+    "class_weight": [
+      null,
+      "balanced"
+    ]
+  },
+  "only_class_weight_differs": true,
+  "identical_feature_columns": [
+    "delta_Fpz-Cz",
+    "delta_Pz-Oz",
+    "theta_Fpz-Cz",
+    "theta_Pz-Oz",
+    "alpha_Fpz-Cz",
+    "alpha_Pz-Oz",
+    "sigma_Fpz-Cz",
+    "sigma_Pz-Oz",
+    "beta_Fpz-Cz",
+    "beta_Pz-Oz"
+  ],
+  "identical_model_inputs": true,
+  "per_fold_feature_fingerprints": [
+    {
+      "fold": 1,
+      "declared_test_subjects": [
+        4,
+        5
+      ],
+      "actual_test_subjects": [
+        4,
+        5
+      ],
+      "subject_overlap": [],
+      "standard_train_feature_sha256": "8737477c27eff3bd3946843eca8f737d9b47b7e2e7154c1b8dcffd55716f7759",
+      "balanced_train_feature_sha256": "8737477c27eff3bd3946843eca8f737d9b47b7e2e7154c1b8dcffd55716f7759",
+      "standard_test_feature_sha256": "4be7dc316037a65d2765d064235de90d25d1670b22c49c34cd4025c99fb91a1d",
+      "balanced_test_feature_sha256": "4be7dc316037a65d2765d064235de90d25d1670b22c49c34cd4025c99fb91a1d"
+    },
+    {
+      "fold": 2,
+      "declared_test_subjects": [
+        0,
+        8
+      ],
+      "actual_test_subjects": [
+        0,
+        8
+      ],
+      "subject_overlap": [],
+      "standard_train_feature_sha256": "c4d5b593c1a9f9c7787a62efda49ee2604f5695605346550d42820704597f479",
+      "balanced_train_feature_sha256": "c4d5b593c1a9f9c7787a62efda49ee2604f5695605346550d42820704597f479",
+      "standard_test_feature_sha256": "f74568eeb1c0e3154386c11c36cc5b3bd9720e2f1a020d255ee316d521a022cd",
+      "balanced_test_feature_sha256": "f74568eeb1c0e3154386c11c36cc5b3bd9720e2f1a020d255ee316d521a022cd"
+    },
+    {
+      "fold": 3,
+      "declared_test_subjects": [
+        6,
+        9
+      ],
+      "actual_test_subjects": [
+        6,
+        9
+      ],
+      "subject_overlap": [],
+      "standard_train_feature_sha256": "6de3a14eeeacfad566b5b1168ad233048b7c0da5f1c1d4a502fdbe925d56e5c3",
+      "balanced_train_feature_sha256": "6de3a14eeeacfad566b5b1168ad233048b7c0da5f1c1d4a502fdbe925d56e5c3",
+      "standard_test_feature_sha256": "c66d09f6d2df7c1e31ee11a9b2e87949a95de9075a76b41ace551699fddf0c7e",
+      "balanced_test_feature_sha256": "c66d09f6d2df7c1e31ee11a9b2e87949a95de9075a76b41ace551699fddf0c7e"
+    },
+    {
+      "fold": 4,
+      "declared_test_subjects": [
+        1,
+        3
+      ],
+      "actual_test_subjects": [
+        1,
+        3
+      ],
+      "subject_overlap": [],
+      "standard_train_feature_sha256": "4d6a75d9fbbab9e3fc606af31e2753703c4e2785206fe42afabbe290b2c1f3d6",
+      "balanced_train_feature_sha256": "4d6a75d9fbbab9e3fc606af31e2753703c4e2785206fe42afabbe290b2c1f3d6",
+      "standard_test_feature_sha256": "8fd4ec8fcbb1a43c73d394e901c8fed8ae50317bc91bd782682cff8b103a65d6",
+      "balanced_test_feature_sha256": "8fd4ec8fcbb1a43c73d394e901c8fed8ae50317bc91bd782682cff8b103a65d6"
+    },
+    {
+      "fold": 5,
+      "declared_test_subjects": [
+        2,
+        7
+      ],
+      "actual_test_subjects": [
+        2,
+        7
+      ],
+      "subject_overlap": [],
+      "standard_train_feature_sha256": "503ed247a90ab3e78abeca01ea2c7bebe7b90e3bebb621b55b761b93bc252332",
+      "balanced_train_feature_sha256": "503ed247a90ab3e78abeca01ea2c7bebe7b90e3bebb621b55b761b93bc252332",
+      "standard_test_feature_sha256": "1a6bcd7e4e1d6dd9a9e1c51d40a0ab67ea7c09fb522622d6f3b97ede0eb26685",
+      "balanced_test_feature_sha256": "1a6bcd7e4e1d6dd9a9e1c51d40a0ab67ea7c09fb522622d6f3b97ede0eb26685"
+    }
+  ],
+  "subject_leakage_detected": false,
+  "each_subject_tested_once": true,
+  "oof_epochs_expected": 9913,
+  "oof_epochs_observed": 9913,
+  "oof_duplicate_subject_epoch_keys": 0,
+  "each_epoch_has_exactly_one_oof_prediction": true
+}

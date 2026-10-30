@@ -1,0 +1,668 @@
+{
+  "fixed_subjects": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "fixed_recording": 1,
+  "expected_epochs": 9913,
+  "observed_epochs": 9913,
+  "feature_dimension_10d": 10,
+  "feature_dimension_12d": 12,
+  "accepted_10d_cache_sha256_before_run": "c5beace65ee94f69f828fb11e6c66a85cb62e0fc314e7b5f787786006095b89b",
+  "accepted_fold_assignments_sha256": "b03d677ce4167643c27763238d17b5826d402acde8c1e08285d9f96d7d05ff92",
+  "accepted_fold_assignments_read_unchanged": true,
+  "fold_assignments": [
+    {
+      "fold": 1,
+      "train_subjects": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "test_subjects": [
+        4,
+        5
+      ],
+      "subject_overlap": []
+    },
+    {
+      "fold": 2,
+      "train_subjects": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9
+      ],
+      "test_subjects": [
+        0,
+        8
+      ],
+      "subject_overlap": []
+    },
+    {
+      "fold": 3,
+      "train_subjects": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "test_subjects": [
+        6,
+        9
+      ],
+      "subject_overlap": []
+    },
+    {
+      "fold": 4,
+      "train_subjects": [
+        0,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "test_subjects": [
+        1,
+        3
+      ],
+      "subject_overlap": []
+    },
+    {
+      "fold": 5,
+      "train_subjects": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9
+      ],
+      "test_subjects": [
+        2,
+        7
+      ],
+      "subject_overlap": []
+    }
+  ],
+  "recomputed_feature_checks": {
+    "recomputed_10d_exact_match": true,
+    "recomputed_10d_within_tolerance": true,
+    "comparison_tolerance": {
+      "rtol": 1e-08,
+      "atol": 1e-10
+    },
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0,
+    "entropy_min": 0.3854434069423271,
+    "entropy_max": 0.9875808741459987,
+    "entropy_finite": true,
+    "psd_frequency_bin_count_K": 886,
+    "psd_frequency_first_hz": 0.5,
+    "psd_frequency_last_hz": 30.0,
+    "psd_method": "multitaper"
+  },
+  "entropy_columns": [
+    "spectral_entropy_Fpz-Cz",
+    "spectral_entropy_Pz-Oz"
+  ],
+  "entropy_finite": true,
+  "entropy_min": 0.3854434069423271,
+  "entropy_max": 0.9875808741459987,
+  "entropy_in_unit_interval": true,
+  "oof": {
+    "per_fold": [
+      {
+        "fold": 1,
+        "train_subjects": [
+          0,
+          1,
+          2,
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        "test_subjects": [
+          4,
+          5
+        ],
+        "subject_overlap": [],
+        "feature_sets": {
+          "10D": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz"
+            ],
+            "train_feature_sha256": "1febd28206f1e8ccad0cb4a639c68e0a9666164be92e2ffbe9388baf8919c778",
+            "test_feature_sha256": "5dad9f22328fb2591f34b7ac3791ca977de6aa81e8b1e6a0ca7c5760e33e0d21",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          },
+          "12D + entropy": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz",
+              "spectral_entropy_Fpz-Cz",
+              "spectral_entropy_Pz-Oz"
+            ],
+            "train_feature_sha256": "3dae4bed4d4e1cc50c902f17b691b2cacfad19c9fcf421ea3faf42d37aea1923",
+            "test_feature_sha256": "290005a489239fc3702d617a4a599da856c88cd6b14c661f6b1503ffc1de45ac",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "train_subjects": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          9
+        ],
+        "test_subjects": [
+          0,
+          8
+        ],
+        "subject_overlap": [],
+        "feature_sets": {
+          "10D": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz"
+            ],
+            "train_feature_sha256": "c1d4efaa12c72076575b8d8a49d46671b9a8ae903e54a6a970347d8233fb2818",
+            "test_feature_sha256": "daa697a83a405ecffee71a95d6afae68b21ca94dd4298bacf7396597e9495a58",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          },
+          "12D + entropy": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz",
+              "spectral_entropy_Fpz-Cz",
+              "spectral_entropy_Pz-Oz"
+            ],
+            "train_feature_sha256": "7dc02aeca4fe83371ffd9f830cb80bb39ee11370f863990d06c88c3627118851",
+            "test_feature_sha256": "92508bc5c3d8a211524014dd5a8562ac3ae3ab1a6a41bbfea0cef63a06f86559",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "train_subjects": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "test_subjects": [
+          6,
+          9
+        ],
+        "subject_overlap": [],
+        "feature_sets": {
+          "10D": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz"
+            ],
+            "train_feature_sha256": "dc7678545b223100be09928914507781a0c2846f80278ac12edf795b2f6b5acc",
+            "test_feature_sha256": "20c615b4e554bab38a90e41caec01efcb03731031dfd15586b7248b5e0bf3558",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          },
+          "12D + entropy": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz",
+              "spectral_entropy_Fpz-Cz",
+              "spectral_entropy_Pz-Oz"
+            ],
+            "train_feature_sha256": "70da4968698a97b008fe71155883cc212d98e7000055852d860ad9831251d53f",
+            "test_feature_sha256": "c2f7876a400e7b5a91dff1a6f53d3073c010b904719a6d8c424a0dfbdfb167ab",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "train_subjects": [
+          0,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "test_subjects": [
+          1,
+          3
+        ],
+        "subject_overlap": [],
+        "feature_sets": {
+          "10D": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz"
+            ],
+            "train_feature_sha256": "33cdb923d1f9d2a69671d2a6bdd851e0eb702eb7460e934365620a9eeadd708a",
+            "test_feature_sha256": "136aa8d2834e806739aa06398c8c11fc419bde43397cf7c5671cfeef6ba2e2bd",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          },
+          "12D + entropy": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz",
+              "spectral_entropy_Fpz-Cz",
+              "spectral_entropy_Pz-Oz"
+            ],
+            "train_feature_sha256": "4e4d8a1fabd644200671431cf545abfa6d3f0898b6b74cfe09c6cb6adc4fa55d",
+            "test_feature_sha256": "588acb9c799884a2364642bf73cc8d8e3b8dafdf8ae890ea1856901861093582",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          }
+        }
+      },
+      {
+        "fold": 5,
+        "train_subjects": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          6,
+          8,
+          9
+        ],
+        "test_subjects": [
+          2,
+          7
+        ],
+        "subject_overlap": [],
+        "feature_sets": {
+          "10D": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz"
+            ],
+            "train_feature_sha256": "38f4b5fefc6c7356bc68a4d0fe1390b43f946ac0baa1f1b0e9a4adbab4effff6",
+            "test_feature_sha256": "15a0c7ffd44a860f6839d224d319612a666e84610924f95ca7dae00e868354dd",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          },
+          "12D + entropy": {
+            "feature_columns": [
+              "delta_Fpz-Cz",
+              "delta_Pz-Oz",
+              "theta_Fpz-Cz",
+              "theta_Pz-Oz",
+              "alpha_Fpz-Cz",
+              "alpha_Pz-Oz",
+              "sigma_Fpz-Cz",
+              "sigma_Pz-Oz",
+              "beta_Fpz-Cz",
+              "beta_Pz-Oz",
+              "spectral_entropy_Fpz-Cz",
+              "spectral_entropy_Pz-Oz"
+            ],
+            "train_feature_sha256": "20f06876fdb5ce0d8bf951138bf049455ac39571f5dd1f2a459fae18a428611d",
+            "test_feature_sha256": "fe8cde8303ac8cf246bf5c996a95be0fbdae7e87e9af82eff5d103e37017c59c",
+            "rf_parameters": {
+              "bootstrap": true,
+              "ccp_alpha": 0.0,
+              "class_weight": "balanced",
+              "criterion": "gini",
+              "max_depth": null,
+              "max_features": "sqrt",
+              "max_leaf_nodes": null,
+              "max_samples": null,
+              "min_impurity_decrease": 0.0,
+              "min_samples_leaf": 1,
+              "min_samples_split": 2,
+              "min_weight_fraction_leaf": 0.0,
+              "monotonic_cst": null,
+              "n_estimators": 100,
+              "n_jobs": null,
+              "oob_score": false,
+              "random_state": 241,
+              "verbose": 0,
+              "warm_start": false
+            }
+          }
+        }
+      }
+    ],
+    "duplicate_subject_epoch_keys": 0,
+    "expected_oof_epochs": 9913,
+    "observed_oof_epochs": 9913,
+    "each_epoch_exactly_once": true,
+    "subject_leakage_detected": false,
+    "baseline_gate": {
+      "accepted_baseline_oof_keys_fold_and_truth_match": true,
+      "accepted_baseline_oof_predictions_exact_match": true,
+      "accepted_balanced_accuracy": 0.7663673963482296,
+      "accepted_balanced_macro_f1": 0.706107339099263,
+      "rerun_10d_accuracy": 0.7663673963482296,
+      "rerun_10d_macro_f1": 0.706107339099263,
+      "baseline_metric_deltas": {
+        "accuracy": 0.0,
+        "macro_f1": 0.0
+      },
+      "baseline_per_class_metrics_within_tolerance": true,
+      "baseline_metrics_within_tolerance": true,
+      "metric_tolerance_absolute": 1e-08,
+      "local_sklearn_version": "1.9.1",
+      "exact_match_deviation_reason": null,
+      "accepted_sklearn_version": null
+    }
+  },
+  "baseline_reproduction": {
+    "accepted_baseline_oof_keys_fold_and_truth_match": true,
+    "accepted_baseline_oof_predictions_exact_match": true,
+    "accepted_balanced_accuracy": 0.7663673963482296,
+    "accepted_balanced_macro_f1": 0.706107339099263,
+    "rerun_10d_accuracy": 0.7663673963482296,
+    "rerun_10d_macro_f1": 0.706107339099263,
+    "baseline_metric_deltas": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    "baseline_per_class_metrics_within_tolerance": true,
+    "baseline_metrics_within_tolerance": true,
+    "metric_tolerance_absolute": 1e-08,
+    "local_sklearn_version": "1.9.1",
+    "exact_match_deviation_reason": null,
+    "accepted_sklearn_version": null
+  },
+  "all_folds_subject_disjoint": true,
+  "rf_parameters_identical_between_feature_sets": true,
+  "no_hyperparameter_search": true,
+  "no_hypothesis_test": true
+}

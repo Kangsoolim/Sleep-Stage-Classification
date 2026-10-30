@@ -1,0 +1,81 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter transient files
+.ipynb_checkpoints/
+
+# Sleep-EDF / MNE raw data and caches
+*.edf
+*.EDF
+data/raw/
+data/physionet-sleep-data/
+data/sleep-edf/
+data/mne_data/
+mne_data/
+MNE-data/
+MNE_data/
+~/.mne/
+.mne/
+data/mne_cache/
+.cache/mne/
+data/processed/
+results/main_experiment/*.log
+
+# Large intermediate artifacts
+*.fif
+*.h5
+*.hdf5
+*.parquet
+*.pkl
+*.pickle
+*.joblib
+*.npz
+*.npy
+*.tar
+*.zip
+*.gz
+checkpoints/
+cache/
+tmp/
+temp/
+
+# Local secrets and authentication files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+token.json
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Course reports, covers and internal document tooling (local only)
+/report/
+/_report_work/
+/_docx_inspect.py
+/_format_final_report.py
+/_raster_pdf.py
+/_verify_final_report.py
+/_word_update_export.ps1
+/src/build_spectral_entropy_report.py
+*.doc
+*.docx
+~$*
+/*.log
+
+# Other standard local private-key filenames
+id_rsa
+id_ed25519

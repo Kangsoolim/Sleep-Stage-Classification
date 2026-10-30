@@ -1,0 +1,11 @@
+                 precision    recall  f1-score   support
+
+  Sleep stage W       0.48      0.97      0.64       157
+  Sleep stage 1       0.22      0.27      0.24       109
+  Sleep stage 2       0.94      0.80      0.86       562
+Sleep stage 3/4       0.78      0.96      0.86       105
+  Sleep stage R       0.58      0.17      0.26       170
+
+       accuracy                           0.69      1103
+      macro avg       0.60      0.63      0.57      1103
+   weighted avg       0.73      0.69      0.68      1103

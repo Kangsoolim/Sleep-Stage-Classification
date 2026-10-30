@@ -1,0 +1,51 @@
+feature_set,true_label,true_class,pred_label,pred_class,count
+10D,1,W,1,W,1551
+10D,1,W,2,N1,140
+10D,1,W,3,N2,10
+10D,1,W,4,Stage 3+4,10
+10D,1,W,5,REM,49
+10D,2,N1,1,W,178
+10D,2,N1,2,N1,285
+10D,2,N1,3,N2,91
+10D,2,N1,4,Stage 3+4,3
+10D,2,N1,5,REM,207
+10D,3,N2,1,W,45
+10D,3,N2,2,N1,184
+10D,3,N2,3,N2,3357
+10D,3,N2,4,Stage 3+4,435
+10D,3,N2,5,REM,291
+10D,4,Stage 3+4,1,W,11
+10D,4,Stage 3+4,2,N1,2
+10D,4,Stage 3+4,3,N2,229
+10D,4,Stage 3+4,4,Stage 3+4,1237
+10D,4,Stage 3+4,5,REM,4
+10D,5,REM,1,W,34
+10D,5,REM,2,N1,224
+10D,5,REM,3,N2,167
+10D,5,REM,4,Stage 3+4,2
+10D,5,REM,5,REM,1167
+12D + entropy,1,W,1,W,1553
+12D + entropy,1,W,2,N1,139
+12D + entropy,1,W,3,N2,9
+12D + entropy,1,W,4,Stage 3+4,8
+12D + entropy,1,W,5,REM,51
+12D + entropy,2,N1,1,W,179
+12D + entropy,2,N1,2,N1,279
+12D + entropy,2,N1,3,N2,91
+12D + entropy,2,N1,4,Stage 3+4,5
+12D + entropy,2,N1,5,REM,210
+12D + entropy,3,N2,1,W,45
+12D + entropy,3,N2,2,N1,162
+12D + entropy,3,N2,3,N2,3375
+12D + entropy,3,N2,4,Stage 3+4,426
+12D + entropy,3,N2,5,REM,304
+12D + entropy,4,Stage 3+4,1,W,11
+12D + entropy,4,Stage 3+4,2,N1,2
+12D + entropy,4,Stage 3+4,3,N2,206
+12D + entropy,4,Stage 3+4,4,Stage 3+4,1261
+12D + entropy,4,Stage 3+4,5,REM,3
+12D + entropy,5,REM,1,W,38
+12D + entropy,5,REM,2,N1,216
+12D + entropy,5,REM,3,N2,173
+12D + entropy,5,REM,4,Stage 3+4,1
+12D + entropy,5,REM,5,REM,1166

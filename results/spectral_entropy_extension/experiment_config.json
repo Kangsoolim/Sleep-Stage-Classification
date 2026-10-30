@@ -1,0 +1,113 @@
+{
+  "experiment": "Spectral Entropy exploratory feature extension",
+  "dataset": "Sleep-EDF Expanded / Sleep Cassette",
+  "subjects": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "recording": 1,
+  "channels": [
+    "Fpz-Cz",
+    "Pz-Oz"
+  ],
+  "sampling_frequency_hz": 100,
+  "epoch_duration_s": 30,
+  "n_epochs": 9913,
+  "stages": [
+    "W",
+    "N1",
+    "N2",
+    "Stage 3+4",
+    "REM"
+  ],
+  "core_features": [
+    "delta_Fpz-Cz",
+    "delta_Pz-Oz",
+    "theta_Fpz-Cz",
+    "theta_Pz-Oz",
+    "alpha_Fpz-Cz",
+    "alpha_Pz-Oz",
+    "sigma_Fpz-Cz",
+    "sigma_Pz-Oz",
+    "beta_Fpz-Cz",
+    "beta_Pz-Oz"
+  ],
+  "extension_features": [
+    "spectral_entropy_Fpz-Cz",
+    "spectral_entropy_Pz-Oz"
+  ],
+  "feature_dimensions": {
+    "10D": 10,
+    "12D + entropy": 12
+  },
+  "psd": {
+    "method": "multitaper",
+    "api": "Epochs.compute_psd(picks='eeg', fmin=0.5, fmax=30.0) with the same MNE defaults as Core",
+    "range_hz": [
+      0.5,
+      30.0
+    ],
+    "frequency_bin_count_K": 886,
+    "frequency_grid_first_hz": 0.5,
+    "frequency_grid_last_hz": 30.0,
+    "entropy_zero_probability_convention": "0 log 0 = 0; positive mask only avoids log(0)",
+    "entropy_denominator": "log(K), with fixed K equal to all valid bins in the 0.5-30 Hz PSD grid"
+  },
+  "fold_assignment_path": "results/main_experiment/fold_assignments.csv",
+  "fold_assignment_sha256": "b03d677ce4167643c27763238d17b5826d402acde8c1e08285d9f96d7d05ff92",
+  "folds_read_without_regeneration": true,
+  "model": {
+    "class": "sklearn.ensemble.RandomForestClassifier",
+    "n_estimators": 100,
+    "random_state": 241,
+    "class_weight": "balanced",
+    "other_parameters": "scikit-learn defaults",
+    "scikit_learn_version": "1.9.1"
+  },
+  "input_cache_sha256": "c5beace65ee94f69f828fb11e6c66a85cb62e0fc314e7b5f787786006095b89b",
+  "accepted_oof_sha256": "22c27dc9ef9260f4cd5443ba789eff582db24a1115c6c07d37d9dab4fbe09d19",
+  "mne_version": "1.13.2",
+  "feature_validation": {
+    "recomputed_10d_exact_match": true,
+    "recomputed_10d_within_tolerance": true,
+    "comparison_tolerance": {
+      "rtol": 1e-08,
+      "atol": 1e-10
+    },
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0,
+    "entropy_min": 0.3854434069423271,
+    "entropy_max": 0.9875808741459987,
+    "entropy_finite": true,
+    "psd_frequency_bin_count_K": 886,
+    "psd_frequency_first_hz": 0.5,
+    "psd_frequency_last_hz": 30.0,
+    "psd_method": "multitaper"
+  },
+  "baseline_reproduction": {
+    "accepted_baseline_oof_keys_fold_and_truth_match": true,
+    "accepted_baseline_oof_predictions_exact_match": true,
+    "accepted_balanced_accuracy": 0.7663673963482296,
+    "accepted_balanced_macro_f1": 0.706107339099263,
+    "rerun_10d_accuracy": 0.7663673963482296,
+    "rerun_10d_macro_f1": 0.706107339099263,
+    "baseline_metric_deltas": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0
+    },
+    "baseline_per_class_metrics_within_tolerance": true,
+    "baseline_metrics_within_tolerance": true,
+    "metric_tolerance_absolute": 1e-08,
+    "local_sklearn_version": "1.9.1",
+    "exact_match_deviation_reason": null,
+    "accepted_sklearn_version": null
+  }
+}

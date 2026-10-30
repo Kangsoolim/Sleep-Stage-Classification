@@ -1,0 +1,3 @@
+feature_set,feature_set_label,feature_dimension,n_oof_epochs,accuracy,macro_f1,fold_accuracy_mean,fold_accuracy_sd,fold_macro_f1_mean,fold_macro_f1_sd
+10D,Balanced RF / 10D band-power,10,9913,0.766367396348,0.706107339099,0.766106296795,0.0288854547192,0.699799788592,0.0254798116357
+12D + entropy,Balanced RF / 12D band-power + spectral entropy,12,9913,0.770099868859,0.708557021883,0.76983246038,0.0325865863284,0.702744711722,0.0182553951956

@@ -1,0 +1,29 @@
+{
+  "mne_config_MNE_DATA": "data/mne_data",
+  "actual_cache_path_from_fetched_files": "data/mne_data",
+  "subjects": [
+    0,
+    1
+  ],
+  "recording": [
+    1
+  ],
+  "files": [
+    {
+      "subject": 0,
+      "recording": 1,
+      "psg_edf": "data/mne_data/physionet-sleep-data/SC4001E0-PSG.edf",
+      "hypnogram_edf": "data/mne_data/physionet-sleep-data/SC4001EC-Hypnogram.edf",
+      "psg_exists": true,
+      "hypnogram_exists": true
+    },
+    {
+      "subject": 1,
+      "recording": 1,
+      "psg_edf": "data/mne_data/physionet-sleep-data/SC4011E0-PSG.edf",
+      "hypnogram_edf": "data/mne_data/physionet-sleep-data/SC4011EH-Hypnogram.edf",
+      "psg_exists": true,
+      "hypnogram_exists": true
+    }
+  ]
+}
