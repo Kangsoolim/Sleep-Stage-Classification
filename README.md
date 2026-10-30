@@ -7,7 +7,7 @@
 - 数据：[PhysioNet Sleep-EDF Database Expanded v1.0.0](https://physionet.org/content/sleep-edfx/1.0.0/) 中的 Sleep Cassette；版本 DOI：[10.13026/C2X676](https://doi.org/10.13026/C2X676)。使用 MNE `sleep_physionet.age.fetch_data()` 按需获取 EDF 和 Hypnogram。
 - 官方方法：[MNE-Python Sleep stage classification from polysomnography (PSG) data](https://mne.tools/stable/auto_tutorials/clinical/60_sleep.html)；本仓库的复现位于 `notebooks/01_mne_official_reproduction.ipynb`。
 
-仅使用 Fpz-Cz、Pz-Oz 两路 EEG。将 Sleep stage 3/4 合并为 N3，形成 W、N1、N2、N3、REM 五类；保留睡眠前后各约 30 分钟 Wake，按 30 秒切 epoch。特征是 0.5–30 Hz 归一化 PSD 中 delta、theta、alpha、sigma、beta 五个频带在两路 EEG 上的相对功率，共 10 维；具体为归一化 PSD 的频带内均值，而非频带积分。0.5–30 Hz 是 PSD 分析范围，不是时域滤波步骤。
+仅使用 Fpz-Cz、Pz-Oz 两路 EEG。将 R&K 标注体系中的 Stage 3 与 Stage 4 合并为 Stage 3+4，形成 W、N1、N2、Stage 3+4、REM 五分类任务。保留睡眠前后各约 30 分钟 Wake，按 30 秒切 epoch。特征是 0.5–30 Hz 归一化 PSD 中 delta、theta、alpha、sigma、beta 五个频带在两路 EEG 上的相对功率，共 10 维；具体为归一化 PSD 的频带内均值，而非频带积分。0.5–30 Hz 是 PSD 分析范围，不是时域滤波步骤。
 
 ## 环境与安装
 
